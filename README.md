@@ -22,11 +22,15 @@ $CCokie->setCookie(
         )
 );
 
+# Get 'name' cookie
 echo $CCokie->getCookie('name');
 
-echo $CCokie->getCookie('age');
-
+# Get 'list' cookie
 print_r($CCokie->getCookie('list'));
+
+# Get 'all' cookie
+echo $CCokie->getCookie();
+
 
 # Remove 'list' cookie
 $CCokie->removeCookie('list');
