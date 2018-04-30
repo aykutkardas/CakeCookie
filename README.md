@@ -3,19 +3,20 @@ Cookie Helper for PHP
 
 ## Usage
 ```php
-<?php
-
+# require helper
 require '../src/CakeCookie.php';
 
 $CCokie = new CakeCookie;
 
 # setCookie([data:Array, [time:Array]])
 $CCokie->setCookie(
+    # cookie data
     array(
         'name' => 'John', 
         'age' => 26, 
         'list' => ['php', 'js', 'css']
     ),
+    # expires time
     array(
         'month' => 3,  # year|month|day|hour|minute|second
         'second' => 30
@@ -29,7 +30,7 @@ echo $CCokie->getCookie('name');
 print_r($CCokie->getCookie('list'));
 
 # Get 'all' cookie
-echo $CCokie->getCookie();
+print_r($CCokie->getCookie());
 
 
 # Remove 'list' cookie
